@@ -33,7 +33,7 @@ const AnimatedSVG = () => {
       },
       duration: 60,
     })
-      .from(".line", { duration: 20 }, 10)
+      .from(".line", { duration: 10 }, 0)
       .to(
         ".ball",
         {
@@ -46,7 +46,7 @@ const AnimatedSVG = () => {
         },
         0
       )
-      .to("#svg", { attr: { viewBox: "1300 50 1900 709" }, duration: 20 }, 15)
+      .to("#svg", { attr: { viewBox: "1300 0 1900 709" }, duration: 20 }, 5)
       .add(poppins, 0)
       .progress(0); // Start the animation at the beginning
 
@@ -57,7 +57,6 @@ const AnimatedSVG = () => {
         main.progress(self.progress);
       },
     });
-
 
   }, []);
 

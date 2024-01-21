@@ -86,7 +86,7 @@ const Crousal = ({ slides }) => {
              return (
                <div className={`flex flex-col items-center justify-center px-[15px] md:px-[85px] w-full h-[480px] rounded-[56px] blur-[0px] shadow ${index === 0? "bg-[#EDFCE2]" : index === 1 ? "bg-[#EAE2FC]" : "bg-[#FCF6E2]"}`} key={index}>
                  <img src={slide.img_src} alt="logo" className='mb-[20px]'/>
-                 <p className='text-[20px] md:text-[28px] font-bold'>
+                 <p className='text-[20px] text-center md:text-[28px] font-bold'>
                    {slide.title}
                 
                  </p>

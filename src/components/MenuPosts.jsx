@@ -40,7 +40,15 @@ const MenuPosts = ({ withImage  }) => {
               </div>
             )}
             <div className={"textContainer"}>
-              <span className={`${"category"} ${blog.category}`}>{blog.category}</span>
+              <span className="flex gap-1">
+              {
+                blog?.category.map((category)=>{
+                  return <span className={`${"category"} ${category}`}>{category}</span>
+                })
+              }
+              
+                            </span>
+              
               <h3 className={"postTitle"}>
                 {blog.title.substring(0, 30)}
               </h3>

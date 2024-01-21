@@ -111,7 +111,7 @@ const WritePage = () => {
       formData.append("title", title)
       formData.append("description", value)
       for (var i = 0; i < category.length; i++) {
-        formData.append('category', category[i]);
+        formData.append('category', category[i].toLowerCase());
       }
       formData.append("thumbnail", file)
 

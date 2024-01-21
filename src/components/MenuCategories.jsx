@@ -1,11 +1,40 @@
-import {Link} from "react-router-dom";
-import React from "react";
+import {Link, useParams} from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import "../styles/MenuCategories.css"
+import axios from "axios";
  
 const MenuCategories = () => {
-  return (
+  const { id } = useParams()
+  const host = "http://localhost:5000"
+  const [blog, setBlog] = useState(null)
+  
+  const getBlog = async() => {
+    try {
+      const res = await axios({
+        url : `${host}/api/blogs/${id}`,
+        method : "get",
+  
+      })
+      console.log(res);
+      setBlog(res.data.Blog)
+    } catch (error) {
+      alert(error.message)
+    }
+  }
+  useEffect(()=>{
+
+    getBlog()
+  }, [id])
+  return  (
     <div className={"categoryList"}>
-      <Link
+      {
+        blog?.category.map((category)=>{
+          return <Link href="/blog" className={`${"categoryItem"} ${category}`}>
+          {category}
+        </Link>
+        })
+      }
+      {/* <Link
         href="/blog?cat=style"
         className={`${"categoryItem"} ${"style"}`}
       >
@@ -13,19 +42,8 @@ const MenuCategories = () => {
       </Link>
       <Link href="/blog" className={`${"categoryItem"} ${"fashion"}`}>
         Fashion
-      </Link>
-      <Link href="/blog" className={`${"categoryItem"} ${"food"}`}>
-        Food
-      </Link>
-      <Link href="/blog" className={`${"categoryItem"} ${"travel"}`}>
-        Travel
-      </Link>
-      <Link href="/blog" className={`${"categoryItem"} ${"culture"}`}>
-        Culture
-      </Link>
-      <Link href="/blog" className={`${"categoryItem"} ${"coding"}`}>
-        Coding
-      </Link>
+      </Link> */}
+      
     </div>
   );
 };

@@ -17,7 +17,7 @@ const Video = () => {
                 {/* <img src="" alt="" /> */}
                 <span className='flex items-center absolute top-[-100px] md:top-[-250px] -z-10'>
                     <span className='video_bg_blur hidden md:block'></span>
-                    <svg width="370" height="309" viewBox="0 0 391 309" fill="none" className='w-[180px] h-[150px] md:w-[370px] md:h-[309px] mr-[-50px]' xmlns="http://www.w3.org/2000/svg">
+                    {/* <svg width="370" height="309" viewBox="0 0 391 309" fill="none" className='w-[180px] h-[150px] md:w-[370px] md:h-[309px] mr-[-50px]' xmlns="http://www.w3.org/2000/svg">
                         <path d="M77.0748 77.3271C119.642 34.7599 188.657 34.7599 231.224 77.3271L308.299 154.402L231.224 231.476C188.657 274.044 119.642 274.044 77.0748 231.476V231.476C34.5076 188.909 34.5076 119.894 77.0748 77.3271V77.3271Z" stroke="url(#paint0_angular_519_580)" stroke-width="70" />
                         <defs>
                             <radialGradient id="paint0_angular_519_580" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(154.149 154.402) scale(193.351)">
@@ -25,8 +25,8 @@ const Video = () => {
                                 <stop offset="1" stop-color="#2D89C8" stop-opacity="0" />
                             </radialGradient>
                         </defs>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="348" height="289" viewBox="0 0 348 289" fill="none">
+                    </svg> */}
+                    {/* <svg xmlns="http://www.w3.org/2000/svg" width="348" height="289" viewBox="0 0 348 289" fill="none" className='w-[180px] h-[150px] md:w-[370px] md:h-[309px] mr-[-50px]'>
                         <path d="M280.925 221.178C238.358 263.745 169.343 263.745 126.776 221.178L49.7013 144.103L126.776 67.0285C169.343 24.4614 238.358 24.4614 280.925 67.0285V67.0285C323.492 109.596 323.492 178.611 280.925 221.178V221.178Z" stroke="url(#paint0_angular_1039_7844)" stroke-width="70" />
                         <defs>
                             <radialGradient id="paint0_angular_1039_7844" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(203.851 144.103) rotate(180) scale(193.351)">
@@ -34,7 +34,8 @@ const Video = () => {
                                 <stop offset="1" stop-color="#2D89C8" stop-opacity="0" />
                             </radialGradient>
                         </defs>
-                    </svg>
+                    </svg> */}
+                    <img src='/frame.png' alt='frame'/>
                 </span>
 
                 <h2 className='text-[#183244] text-[32px] md:text-[42px] font-bold text-center Quicksand max-w-[80%]'>The Better.Giving Alliance</h2>

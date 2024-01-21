@@ -114,7 +114,7 @@ const Edit = () => {
       formData.append("title", title)
       formData.append("description", value)
       for (var i = 0; i < category.length; i++) {
-        formData.append('category', category[i]);
+        formData.append('category', category[i].toLocaleLowerCase());
       }
       if (file) {
           formData.append("thumbnail", file)
